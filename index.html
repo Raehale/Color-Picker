@@ -1,19 +1,38 @@
-<html>
+<!doctype html>
+<html lang="en">
     <head>
+        <title>Color Picker</title>
+
+        <!-- links css file -->
         <link rel="stylesheet" href="index.css">
+
+        <!-- inter google font -->
+        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet" />
     </head>
     <body>
-        <h1>index.html</h1>
+        <header>
+            <input type="color" class="seed-color" id="seedColor" />
+            <select name="scheme" id="colorScheme" class="color-scheme">
+                <option value="monochrome">Monochrome</option>
+                <option value="monochrome-dark">Monochrome-dark</option>
+                <option value="monochrome-light">Monochrome-light</option>
+                <option value="analogic">Analogic</option>
+                <option value="complement">Complement</option>
+                <option value="analogic-complement">Analogic-complement</option>
+                <option value="triad">Triad</option>
+            </select>
+            <button class="get-color-scheme-btn" id="getColorSchemeBtn">Get Color Scheme</button>
+        </header>
+        <main>
+            <section id="colors" class="colors">
+                <!-- colors rendered is js -->
+            </section>
+        </main>
+        <modal id="copiedTextModal" class="copied-text-modal">
+            <!-- hexcode rendered in js -->
+            <h1 class="modal-header">Success!</h1>
+            <p class="modal-text" id="modalText">You just copied HEXCODE to your clipboard!</p>
+        </modal>
         <script src="index.js"></script>
     </body>
 </html>
-
-/*
-Requirements
-1. Choose "seed color" with an <input type="color" />
-2. Choose color scheme mode in a <select>
-3. Clicking button makes request to The color API to get a color scheme
-4. Display the scheme colors and hex values on the page
-Stretch Goals
-1. Copy hex code when clicking color or code
-*/

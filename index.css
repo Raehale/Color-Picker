@@ -1,1 +1,140 @@
+body {
+    color: #D5D4D8;
+    font-family: "Inter", sans-serif;
 
+    background-color: #1F2937;
+
+    margin: 0;
+}
+/***SEARCH HEADER***/
+header {
+    display: grid;
+    grid-template: "seed scheme scheme"
+                    "button button button";
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+
+    background-color: #1F2937;
+
+    padding: 2rem 1rem;
+}
+
+/**COLOR PICKER**/
+.seed-color {
+    grid-area: seed;
+
+    width: 10vw;
+    height: 3em;
+}
+
+/**COLOR SCHEME SELECTOR**/
+.color-scheme {
+    grid-area: scheme;
+
+    color: #D1D5DB;
+    font-family: inherit;
+
+    background-color: #1F293A;
+
+    height: 3em;
+    min-width: 60vw;
+
+    border-radius: 4px;
+    padding: 0 .5rem;
+}
+
+/**GET COLOR SCHEME BUTTON**/
+.get-color-scheme-btn {
+    grid-area: button;
+
+    color: #ffffff;
+    font-family: inherit;
+
+    background-color: #3D4B60;
+
+    border: 0;
+    border-radius: 4px;
+    padding: 1rem 2rem;
+}
+
+.get-color-scheme-btn:hover {
+    cursor: pointer;
+    opacity: .75;
+}
+
+/***COLORS***/
+.colors {
+    display: grid;
+    cursor: pointer;
+}
+
+/**COLOR**/
+.color {
+    flex: 1;
+}
+
+/*COLOR BAR*/
+.color-bar {
+    height: 10vh;
+}
+
+/*COLOR TEXT INFO*/
+.color-info {
+    text-align: center;
+}
+
+/***COPIED TEXT MODAL***/
+.copied-text-modal {
+    display: none; /*grid when shown*/
+    position: absolute;
+    right: 1rem;
+    bottom: 1rem;
+
+    background-color: #3D4B60;
+
+    border-radius: 4px 4px 0 4px;
+    padding: 1rem;
+
+    box-shadow: 0 0 10px #000;
+}
+
+.modal-header {
+    font-size: 1rem;
+
+    margin: 0;
+}
+
+.modal-text {
+    font-size: .8rem;
+
+    margin-bottom: 0;
+}
+
+/***MOBILITY***/
+@media screen and (min-width: 768px) {
+    /**COLOR SELECTION HEADER**/
+    header {
+        display: flex;
+    }
+
+    /*COLOR PICKER*/
+    .seed-color {
+        width: 4em;
+    }
+
+    /*COLOR SCHEME SELECTOR*/
+    .color-scheme {
+        min-width: 30em;
+    }
+
+    /**COLORS**/
+    .colors {
+        display: flex;
+    }
+
+    /*COLOR BAR*/
+    .color-bar {
+        height: 78vh;
+    }
+}
